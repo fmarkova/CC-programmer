@@ -76,6 +76,7 @@ What if I made my own CC programmer, and I don't have JTAG probe?
 --------------------------------------
 I haven't tested it yet, but you'll probably have to use LM Flash programmer to program the write bootloader. After that, you can use xdsdfu. 
 Otherwise, if your computer has old DB-25 parallel port, you can make one even simpler JTAG probe. But you'll have to provide your own 3.3V power supply. 
-About JTAG probe, I suggest this one: 
+About JTAG probe, I suggest this one: https://raw.githubusercontent.com/fmarkova/CC-programmer/master/Firmware/JTAG-Simple.jpg
+Just connect VCC lines to your own 3.3V power supply, and make shared ground. 
 NOTE: You need 74HC244 or equivalent, in order to translate 5V to 3.3V signals!
 NOTE: I'm not responsible for any potential hardware damage or data loss if you're using this method!
