@@ -69,3 +69,13 @@ TP7 - GND
 6.) In Program tab, again press "browse" button and navigate to "firmware.bin". It's in same directory as xdsdfu tool. Now select "erase necessary pages". As a program address offset, use 0x4000. 
 7.) Press "program" button. 
 8.) Once flashing is done, disconnect your CC programmer from power source and JTAG probe, and connect your CC programmer to your computer. Your CC programmer is now ready for use. 
+
+-----------------------------------------
+
+What if I made my own CC programmer, and I don't have JTAG probe?
+--------------------------------------
+I haven't tested it yet, but you'll probably have to use LM Flash programmer to program the write bootloader. After that, you can use xdsdfu. 
+Otherwise, if your computer has old DB-25 parallel port, you can make one even simpler JTAG probe. But you'll have to provide your own 3.3V power supply. 
+About JTAG probe, I suggest this one: 
+NOTE: You need 74HC244 or equivalent, in order to translate 5V to 3.3V signals!
+NOTE: I'm not responsible for any potential hardware damage or data loss if you're using this method!
